@@ -31,6 +31,8 @@ public class MyRectangle implements Shapeable{
     }
 
     public void setName(String name) {
+        if (name==null)
+            throw new IllegalArgumentException();
         this.name = name;
     }
 
@@ -55,6 +57,8 @@ public class MyRectangle implements Shapeable{
     }
 
     public void setWidth(double width) {
+        if (width<=0)
+            throw new InvalidSizeException();
         this.width = width;
     }
 
@@ -63,6 +67,8 @@ public class MyRectangle implements Shapeable{
     }
 
     public void setHeight(double height) {
+        if (height<=0)
+            throw new InvalidSizeException();
         this.height = height;
     }
 
